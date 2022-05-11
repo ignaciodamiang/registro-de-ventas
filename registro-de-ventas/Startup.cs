@@ -50,7 +50,7 @@ namespace registro_de_ventas
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
+                    pattern: "{controller=Presentacion}/{action=Bienvenido}/{id?}");
             });
         }
     }

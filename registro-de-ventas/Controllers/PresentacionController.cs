@@ -9,16 +9,16 @@ using System.Threading.Tasks;
 
 namespace registro_de_ventas.Controllers
 {
-    public class HomeController : Controller
+    public class PresentacionController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        private readonly ILogger<PresentacionController> _logger;
 
-        public HomeController(ILogger<HomeController> logger)
+        public PresentacionController(ILogger<PresentacionController> logger)
         {
             _logger = logger;
         }
 
-        public IActionResult Index()
+        public IActionResult Bienvenido()
         {
             return View();
         }
