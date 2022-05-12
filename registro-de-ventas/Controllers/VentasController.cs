@@ -23,7 +23,10 @@ namespace registro_de_ventas.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult RegistrarVenta(VentaViewModel nuevaVenta)
         {
-            _ventasService.RegistrarVenta(nuevaVenta);
+            if(ModelState.IsValid)
+            {
+                _ventasService.RegistrarVenta(nuevaVenta);
+            }
             return RedirectToAction(nameof(Resultados));
         }
 
