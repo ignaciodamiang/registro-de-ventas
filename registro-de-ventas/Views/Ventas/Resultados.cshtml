@@ -1,5 +1,28 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@model List<VentaViewModel>
 @{
+    ViewData["Title"] = "Ventas";
 }
+
+<h1>Ventas</h1>
+
+<div>
+    <table class="table">
+        <tr>
+            <th>Cliente</th>
+            <th>Cantidad Vendida</th>
+            <th>Precio Unitario</th>
+            <th>Total Venta</th>
+        </tr>
+
+        @foreach (var venta in Model)
+        {
+            <tr>
+                <td>@venta.Cliente</td>
+                <td>@venta.CantidadVendida</td>
+                <td>@venta.PrecioUnitario</td>
+                <td>@venta.TotalVenta</td>
+            </tr>
+        }
+    </table>
+    <a href="/presentacion/bienvenido" class="btn btn-outline-primary">Volver</a>
+</div>

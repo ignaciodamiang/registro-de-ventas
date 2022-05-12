@@ -1,2 +1,20 @@
-﻿@model IEnumerable<registro_de_ventas.Models.VentaViewModel>
+﻿@{
+    ViewData["Title"] = "Nueva venta";
+}
 
+<h1>Nuevo Equipo</h1>
+
+<form asp-action="registrarventa" asp-controller="Ventas" method="post">
+    @Html.AntiForgeryToken()
+    <div>
+        Cliente: <input type="text" name="Cliente" class="form-control" />
+    </div>
+    <div>
+        Cantidad Vendida: <input type="number" name="CantidadVendida" class="form-control" />
+    </div>
+    <div>
+        Precio Unitario: <input type="number" name="PrecioUnitario" class="form-control mb-3" />
+    </div>
+    <input type="submit" value="Registrar Venta" class="btn btn-outline-primary" />
+</form>
+<a href="/presentacion/bienvenido" class="btn btn-outline-primary my-2">Volver</a>

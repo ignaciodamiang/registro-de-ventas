@@ -11,19 +11,13 @@ namespace registro_de_ventas.Controllers
 {
     public class PresentacionController : Controller
     {
-        private readonly ILogger<PresentacionController> _logger;
-
-        public PresentacionController(ILogger<PresentacionController> logger)
+        
+        public PresentacionController()
         {
-            _logger = logger;
+           
         }
-
+        [HttpGet]
         public IActionResult Bienvenido()
-        {
-            return View();
-        }
-
-        public IActionResult Privacy()
         {
             return View();
         }
